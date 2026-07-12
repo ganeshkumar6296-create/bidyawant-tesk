@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   Root Theme Variables
+================================ */
+:root {
+  /* Colors */
+  --background: #ffffff;
+  --foreground: #1c1c1c;
+
+  --primary: #E8ECF3;
+  --secondary: #73711d;
+  --tertiary: #08580d;
+  --neutral-bg: #f6f6f0;
+
+  --dark-1: #1c1c1c;
+  --dark-2: #222222;
+  --dark-3: #666666;
+  --grey: #656665;
+  --black: #222222;
+  --navy: #212844;
+
+  /* Fonts */
+  --font-poppins:
+    "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+
+  --font-nunito:
+    "Nunito Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+  /* Fonts */
+
+  --font-mono: "Roboto Mono", monospace;
+
+  --font-rajdhani: "Rajdhani", sans-serif;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-tertiary: var(--tertiary);
+  --color-secondary: var(--secondary);
+  --color-neutral-bg: var(--neutral-bg);
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
+  --color-dark-3: var(--dark-3);
+  --color-grey: var(--grey);
+  --color-black: var(--black);
+  --color-navy: var(--navy);
+}
+
+/* ===============================
+   Base Styles
+================================ */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-rajdhani);
+    font-weight: 500;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    color: var(--dark-1);
+  }
+}
+
+/* ===============================
+   Font Utility Classes
+================================ */
+.font-poppins {
+  font-family: var(--font-poppins) !important;
+}
+
+.font-nunito {
+  font-family: var(--font-nunito) !important;
+}
+
+.font-poppins-400 {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+
+.font-poppins-500 {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+}
+
+.font-poppins-600 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+
+.font-nunito-400 {
+  font-family: var(--font-nunito);
+  font-weight: 400;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-mono-300 {
+  font-family: var(--font-mono);
+  font-weight: 300;
+}
+
+.font-mono-400 {
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+.font-mono-500 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.font-mono-600 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.font-mono-italic {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani);
+}
+
+.font-rajdhani-300 {
+  font-family: var(--font-rajdhani);
+  font-weight: 300;
+}
+
+.font-rajdhani-400 {
+  font-family: var(--font-rajdhani);
+  font-weight: 400;
+}
+
+.font-rajdhani-500 {
+  font-family: var(--font-rajdhani);
+  font-weight: 500;
+}
+
+.font-rajdhani-600 {
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+.font-rajdhani-700 {
+  font-family: var(--font-rajdhani);
+  font-weight: 700;
+}
+
+/* ===============================
+   Color Utility Classes
+==================================== */
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+.text-tertiary {
+  color: var(--tertiary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-neutral {
+  background-color: var(--neutral-bg);
+}
+
+.text-dark-1 {
+  color: var(--dark-1);
+}
+.text-dark-2 {
+  color: var(--dark-2);
+}
+.text-dark-3 {
+  color: var(--dark-3);
+}
+.text-grey {
+  color: var(--grey);
+}
+.text-black {
+  color: var(--black);
+}
+.text-navy {
+  color: var(--navy);
+}
+
+@layer utilities {
+  .border-secondary {
+    border-color: var(--secondary);
+  }
+}
+
+/* ===============================
+   Links
+================================ */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* ===============================
+   Selection
+================================ */
+::selection {
+  background-color: var(--primary);
+  color: var(--dark-1);
+}
+
+/* ===============================
+   Scrollbar
+================================ */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===============================
+   Responsive Utility Classes
+================================   */
+.responsive-mx {
+  @apply mx-3 sm:mx-4  md:mx-[2vw] lg:mx-[3vw];
+}
+
+.responsivewithoutmobile-mx {
+  @apply mx-0 sm:mx-0 md:mx-[3vw] lg:mx-[4vw];
+}
+
+.flex-between-center {
+  @apply flex justify-between items-center;
+}
+.flex-between-start {
+  @apply flex justify-between items-start;
+}
+
+.flex-justify-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-items-center {
+  @apply flex items-center;
+}
+
+.paragraph {
+  @apply text-[#838383]  md:text-sm text-xs  tracking-wide leading-relaxed;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   Smooth Scroll
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+.input-style {
+  @apply border border-gray-300 rounded-xl px-3 py-3 text-sm outline-none focus:border-secondary w-full;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+a:hover {
+  color: black;
+}
